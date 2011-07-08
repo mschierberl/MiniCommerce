@@ -1,0 +1,37 @@
+
+
+	<bean id="CartDAO" class="[plugin].com.meldsolutions.meldminicommerce.core.cart.CartDAO">
+		<constructor-arg name="dsn"><value>${dsn}</value></constructor-arg>
+		<constructor-arg name="dsnusername"><value>${dsnusername}</value></constructor-arg>
+		<constructor-arg name="dsnpassword"><value>${dsnpassword}</value></constructor-arg>
+		<constructor-arg name="dsnprefix"><value>${dsnprefix}</value></constructor-arg>
+		<constructor-arg name="dsntype"><value>${dsntype}</value></constructor-arg>
+	</bean>
+	<bean id="CartGateway" class="[plugin].com.meldsolutions.meldminicommerce.core.cart.CartGateway">
+		<constructor-arg name="dsn"><value>${dsn}</value></constructor-arg>
+		<constructor-arg name="dsnusername"><value>${dsnusername}</value></constructor-arg>
+		<constructor-arg name="dsnpassword"><value>${dsnpassword}</value></constructor-arg>
+		<constructor-arg name="dsnprefix"><value>${dsnprefix}</value></constructor-arg>
+		<constructor-arg name="dsntype"><value>${dsntype}</value></constructor-arg>
+	</bean>
+	<bean id="CartService" class="[plugin].com.meldsolutions.meldminicommerce.core.cart.CartService">
+	</bean>
+
+
+	<bean id="CartproductDAO" class="[plugin].com.meldsolutions.meldminicommerce.core.cartproduct.CartproductDAO">
+		<constructor-arg name="dsn"><value>${dsn}</value></constructor-arg>
+		<constructor-arg name="dsnusername"><value>${dsnusername}</value></constructor-arg>
+		<constructor-arg name="dsnpassword"><value>${dsnpassword}</value></constructor-arg>
+		<constructor-arg name="dsnprefix"><value>${dsnprefix}</value></constructor-arg>
+		<constructor-arg name="dsntype"><value>${dsntype}</value></constructor-arg>
+	</bean>
+	<bean id="CartproductGateway" class="[plugin].com.meldsolutions.meldminicommerce.core.cartproduct.CartproductGateway">
+		<constructor-arg name="dsn"><value>${dsn}</value></constructor-arg>
+		<constructor-arg name="dsnusername"><value>${dsnusername}</value></constructor-arg>
+		<constructor-arg name="dsnpassword"><value>${dsnpassword}</value></constructor-arg>
+		<constructor-arg name="dsnprefix"><value>${dsnprefix}</value></constructor-arg>
+		<constructor-arg name="dsntype"><value>${dsntype}</value></constructor-arg>
+	</bean>
+	<bean id="CartproductService" class="[plugin].com.meldsolutions.meldminicommerce.core.cartproduct.CartproductService">
+	</bean>
+

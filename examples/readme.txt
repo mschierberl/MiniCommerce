@@ -1,0 +1,1 @@
+The example files in this folder should be placed in /[siteid]/includes/display_objects/custom/meldminicommerce/
