@@ -48,7 +48,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 		<!--- sortable columns, as per database query --->
 		<cfset sCols['0'] = "">
-		<cfset sCols['1'] = "">
+		<cfset sCols['1'] = "transactionid">
 		<cfset sCols['2'] = "lname">
 		<cfset sCols['3'] = "email">
 		<cfset sCols['4'] = "total">
