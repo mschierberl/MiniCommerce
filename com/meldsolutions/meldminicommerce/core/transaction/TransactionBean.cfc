@@ -20,14 +20,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 <!---^^LICENSE-END^^--->
 
-
-
-
-
-
-
-
-
 <cfcomponent displayname="TransactionBean" output="false" extends="MeldMiniCommerce.com.meldsolutions.core.MeldBean">
 <!---^^GENERATEDSTART^^--->
 	<!---^^PROPERTIES-START^^--->

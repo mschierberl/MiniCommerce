@@ -504,7 +504,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 			AND MerchantID = <cfqueryparam value="#arguments.criteria.MerchantID#" CFSQLType="cf_sql_char" maxlength="35" />
 			</cfif>
 
-			<cfif not arguments.isCount AND len( arguments.orderBy )>
+			<cfif not arguments.isCount AND len( arguments.orderBy ) gt 10>
 				ORDER BY #arguments.orderBy#
 			</cfif>
 			<cfif not arguments.isCount and arguments.size gt 0 AND variables.dsntype eq "mysql">
