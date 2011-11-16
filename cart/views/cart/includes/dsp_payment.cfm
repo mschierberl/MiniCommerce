@@ -71,7 +71,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 				</select>
 			</li>
 			<li class="meld-cc-info">
-				nh ji<label for="cvv2Number">#rc.mmRBF.key('verificationnumber')#<span class="required">*</span></label>
+				<label for="cvv2Number">#rc.mmRBF.key('verificationnumber')#<span class="required">*</span></label>
 				<input type="text" size="3" maxlength="4" name="cvv2Number" id="cvv2Number" data-required="true" validate="numeric" message="#rc.mmRBF.key('verificationnumber','validate')#" style="width: 50px"/>
 				<span class="hint">#rc.mmRBF.key('verificationnumber','tip')#</span>
 			</li>
