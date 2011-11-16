@@ -37,19 +37,19 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 		<ul>
 		<li>
 		<label for="fName">#rc.mmRBF.key('user.fname','mura')#<span class="required">*</span></label>
-		<input type="text" id="fName" class="text" name="fname" value="#rc.$.currentUser().getfName()#" required="true" message="#htmlEditFormat(rc.mmRBF.key('user.fnamerequired','mura'))#" maxlength="50"/>
+		<input type="text" id="fName" class="text" name="fname" value="#rc.$.currentUser().getfName()#" data-required="true" message="#htmlEditFormat(rc.mmRBF.key('user.fnamerequired','mura'))#" maxlength="50"/>
 		</li>
 		<li>
 		<label for="lName">#rc.mmRBF.key('user.lname','mura')#<span class="required">*</span></label>
-		<input type="text" id="lName" class="text" name="lname" value="#rc.$.currentUser().getlname()#" required="true" message="#htmlEditFormat(rc.mmRBF.key('user.lnamerequired','mura'))#" maxlength="50"/>
+		<input type="text" id="lName" class="text" name="lname" value="#rc.$.currentUser().getlname()#" data-required="true" message="#htmlEditFormat(rc.mmRBF.key('user.lnamerequired','mura'))#" maxlength="50"/>
 		</li>
 		<li>
 		<label for="company">#rc.mmRBF.key('user.company','mura')#</label>
-		<input type="text" id="company" class="text" name="company" value="#rc.$.currentUser().getcompany()#" required="false" maxlength="50"/>
+		<input type="text" id="company" class="text" name="company" value="#rc.$.currentUser().getcompany()#" data-required="false" maxlength="50"/>
 		</li>
 		<li>
 		<label for="email">#rc.mmRBF.key('user.email','mura')#<span class="required">*</span></label>
-		<input type="text" id="email" class="text" name="email" value="#rc.$.currentUser().getemail()#" required="true" message="#rc.mmRBF.key('user.emailrequired','mura')#" maxlength="50" style="width: 200px">
+		<input type="text" id="email" class="text" name="email" value="#rc.$.currentUser().getemail()#" data-required="true" message="#rc.mmRBF.key('user.emailrequired','mura')#" maxlength="50" style="width: 200px">
 		</li>
 		</ul>
 		<fieldset>
@@ -57,15 +57,15 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 		<ul>
 		<li>
 		<label for="billing_address1">#rc.mmRBF.key('user.address','mura')#<span class="required">*</span></label>
-		<input name="billing_address1" id="billing_address1txt" type="text" value="#rc.billingAddress.address1#" class="text" required="true" message="#rc.mmRBF.key('billingaddressrequired')#" maxlength="50" style="width: 200px">
+		<input name="billing_address1" id="billing_address1txt" type="text" value="#rc.billingAddress.address1#" class="text" data-required="true" message="#rc.mmRBF.key('billingaddressrequired')#" maxlength="50" style="width: 200px">
 		</li>	
 		<li>
 		<label for="billing_address2">#rc.mmRBF.key('user.address','mura')# (2)</label>
-		<input name="billing_address2" id="billing_address2txt" type="text" value="#rc.billingAddress.address2#" class="text"  required="no" maxlength="50" style="width: 200px">
+		<input name="billing_address2" id="billing_address2txt" type="text" value="#rc.billingAddress.address2#" class="text"  data-required="false" maxlength="50" style="width: 200px">
 		</li>	
 		<li>
 		<label for="billing_city">#rc.mmRBF.key('user.city','mura')#<span class="required">*</span></label>
-		<input name="billing_city" id="billing_citytxt" type="text" value="#rc.billingAddress.city#" class="text"  required="true" message="#rc.mmRBF.key('billingcityrequired')#" maxlength="50" style="width: 100px">
+		<input name="billing_city" id="billing_citytxt" type="text" value="#rc.billingAddress.city#" class="text"  data-required="true" message="#rc.mmRBF.key('billingcityrequired')#" maxlength="50" style="width: 100px">
 		</li>	
 		<li>
 		<label for="billing_state">#rc.mmRBF.key('user.state','mura')#</label>
@@ -76,18 +76,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 		</li>	
 		<li>
 		<label for="billing_country">#rc.mmRBF.key('user.country','mura')#<span class="required">*</span></label>
-			<select name="billing_country" id="billing_country" required="true" message="#rc.mmRBF.key('user.country','validate')#">
+			<select name="billing_country" id="billing_country" data-required="true" message="#rc.mmRBF.key('user.country','validate')#">
 				<cfset local.country = rc.billingAddress.country>
 				<cfinclude template="inc_countries.cfm">
 			</select>
 		</li>	
 		<li>
 		<label for="billing_zip">#rc.mmRBF.key('user.zip','mura')#</label>
-		<input name="billing_zip" id="billing_ziptxt" type="text" value="#rc.billingAddress.zip#" class="text"  required="false" maxlength="50" style="width: 50px">
+		<input name="billing_zip" id="billing_ziptxt" type="text" value="#rc.billingAddress.zip#" class="text"  data-required="false" maxlength="50" style="width: 50px">
 		</li>	
 		<li>
 		<label for="billing_phone">#rc.mmRBF.key('user.phone','mura')#</label>
-		<input name="billing_phone" id="billing_phonetxt" type="text" value="#rc.billingAddress.phone#" class="text"  required="no" maxlength="50" style="width: 100px">
+		<input name="billing_phone" id="billing_phonetxt" type="text" value="#rc.billingAddress.phone#" class="text"  data-required="no" maxlength="50" style="width: 100px">
 		</li>	
 		</ul>
 		</fieldset>
@@ -101,15 +101,15 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 		</li>	
 		<li>
 		<label for="address1">#rc.mmRBF.key('user.address','mura')#<span class="required">*</span></label>
-			<input name="shipping_address1" id="shipping_address1txt" type="text" value="#rc.$.currentUser().getaddress1()#" class="text" required="false" maxlength="50" style="width: 200px">
+			<input name="shipping_address1" id="shipping_address1txt" type="text" value="#rc.$.currentUser().getaddress1()#" class="text" data-required="false" maxlength="50" style="width: 200px">
 		</li>	
 		<li>
 		<label for="address2">#rc.mmRBF.key('user.address','mura')# (2)</label>
-			<input name="shipping_address2" id="shipping_address2txt" type="text" value="#rc.$.currentUser().getaddress2()#" class="text"  required="no" maxlength="50" style="width: 200px">
+			<input name="shipping_address2" id="shipping_address2txt" type="text" value="#rc.$.currentUser().getaddress2()#" class="text"  data-required="no" maxlength="50" style="width: 200px">
 		</li>	
 		<li>
 		<label for="city">#rc.mmRBF.key('user.city','mura')#<span class="required">*</span></label>
-			<input name="shipping_city" id="shipping_citytxt" type="text" value="#rc.$.currentUser().getcity()#" class="text"  required="false" maxlength="50" style="width: 100px">
+			<input name="shipping_city" id="shipping_citytxt" type="text" value="#rc.$.currentUser().getcity()#" class="text"  data-required="false" maxlength="50" style="width: 100px">
 		</li>	
 		<li>
 		<label for="shipping_state">#rc.mmRBF.key('user.state','mura')#<span class="required">*</span></label>
@@ -125,11 +125,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 		</li>	
 		<li>
 		<label for="zip">#rc.mmRBF.key('user.zip','mura')#</label>
-		<input name="shipping_zip" id="shipping_ziptxt" type="text" value="#rc.$.currentUser().getzip()#" class="text"  required="false" maxlength="50" style="width: 50px">
+		<input name="shipping_zip" id="shipping_ziptxt" type="text" value="#rc.$.currentUser().getzip()#" class="text"  data-required="false" maxlength="50" style="width: 50px">
 		</li>	
 		<li>
 		<label for="phone">#rc.mmRBF.key('user.phone','mura')#</label>
-		<input name="shipping_phone" id="shipping_phonetxt" type="text" value="#rc.$.currentUser().getphone()#" class="text"  required="no" maxlength="50" style="width: 100px">
+		<input name="shipping_phone" id="shipping_phonetxt" type="text" value="#rc.$.currentUser().getphone()#" class="text"  data-required="no" maxlength="50" style="width: 100px">
 		</li>	
 		</ul>
 		</fieldset>
