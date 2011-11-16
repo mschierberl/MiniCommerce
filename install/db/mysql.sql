@@ -31,6 +31,7 @@ CREATE TABLE `||PRE||mmc_cartproduct` (
   `quantity` int(10) NOT NULL DEFAULT '0',
   `remoteID` char(35) DEFAULT NULL,
   `attributes` text,
+  `useQuantity` tinyint(3) unsigned DEFAULT '1',
   `attributesID` char(35) DEFAULT NULL,
   `tax` decimal(12,2) DEFAULT '0.00',
   `shipping` decimal(12,2) DEFAULT '0.00',
@@ -487,3 +488,5 @@ CREATE TABLE `||PRE||mmc_transaction` (
   KEY `idxOrderIdent` (`orderIdent`),
   KEY `idxSiteID` (`siteID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+SELECT * FROM `||PRE||mmc_transaction`;

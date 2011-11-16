@@ -77,8 +77,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 			</li>
 			<li>
 				<label id="nullBox"></label>
-				<input type="checkbox" value="1" name="purchaseterms" id="purchaseterms" required="true" onclick="$('##purchaseterms_default').val( $(this).is(':checked') ? 1 : '' )" message="#rc.mmRBF.key('purchaseterms','validate')#" />
-				<input type="hidden" name="purchaseterms_default" id="purchaseterms_default" value="" required="true" type="numeric" message="#rc.mmRBF.key('purchaseterms','validate')#" />
+				<input type="checkbox" value="1" name="purchaseterms" id="purchaseterms" required="true" message="#rc.mmRBF.key('purchaseterms','validate')#" />
+				<input type="hidden" name="purchaseterms_default" id="purchaseterms_default" value="" required="true" validate="numeric" message="#rc.mmRBF.key('purchaseterms','validate')#" />
 				#rc.mmRBF.key('termslink')#
 			</li>
 		</ul>
