@@ -27,4 +27,5 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 		<cfloop query="rc.qStates">
 			<option value="#value#"<cfif value eq local.state> SELECTED</cfif>>#name#</</option>
 		</cfloop>
+		<option value="">#rc.mmRBF.key('other')#</option>
 </cfoutput>

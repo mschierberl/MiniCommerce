@@ -42,7 +42,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 		<ul>
 			<li>
 				<label for="paymenttype">#rc.mmRBF.key('paymentType')#<span class="required">*</span></label>
-				<select name="paymenttype" class="select" id="paymenttype" required="true" message="#rc.mmRBF.key('paymenttype','validate')#">
+				<select name="paymenttype" class="select" id="paymenttype" data-required="true" message="#rc.mmRBF.key('paymenttype','validate')#">
 					<option value="">#rc.mmRBF.key('selectpaymenttype')#</option>
 					<cfloop from="1" to="#ArrayLen(rc.aPaymentTypes)#" index="local.iiX">
 						<cfset local.paymentType = rc.aPaymentTypes[local.iiX] />
@@ -52,7 +52,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 			</li>
 			<li class="meld-cc-info">
 				<label for="creditCardNumber">#rc.mmRBF.key('cardnumber')#<span class="required">*</span></label>
-				<input type="text" class="text" maxlength="19" name="creditCardNumber" id="creditCardNumber" required="true" validate="numeric" message="#rc.mmRBF.key('cardnumber','validate')#" style="width: 200px"/>			
+				<input type="text" class="text" maxlength="19" name="creditCardNumber" id="creditCardNumber" data-required="true" validate="numeric" message="#rc.mmRBF.key('cardnumber','validate')#" style="width: 200px"/>			
 			</li>
 			<li class="meld-cc-info">
 				<label for="expDateMonth">#rc.mmRBF.key('expirydate')#<span class="required">*</span></label>
@@ -71,14 +71,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 				</select>
 			</li>
 			<li class="meld-cc-info">
-				<label for="cvv2Number">#rc.mmRBF.key('verificationnumber')#<span class="required">*</span></label>
-				<input type="text" size="3" maxlength="4" name="cvv2Number" id="cvv2Number" required="true" validate="numeric" message="#rc.mmRBF.key('verificationnumber','validate')#" style="width: 50px"/>
+				nh ji<label for="cvv2Number">#rc.mmRBF.key('verificationnumber')#<span class="required">*</span></label>
+				<input type="text" size="3" maxlength="4" name="cvv2Number" id="cvv2Number" data-required="true" validate="numeric" message="#rc.mmRBF.key('verificationnumber','validate')#" style="width: 50px"/>
 				<span class="hint">#rc.mmRBF.key('verificationnumber','tip')#</span>
 			</li>
 			<li>
 				<label id="nullBox"></label>
-				<input type="checkbox" value="1" name="purchaseterms" id="purchaseterms" required="true" message="#rc.mmRBF.key('purchaseterms','validate')#" />
-				<input type="hidden" name="purchaseterms_default" id="purchaseterms_default" value="" required="true" validate="numeric" message="#rc.mmRBF.key('purchaseterms','validate')#" />
+				<input type="checkbox" value="1" name="purchaseterms" id="purchaseterms" data-required="true" message="#rc.mmRBF.key('purchaseterms','validate')#" />
+				<input type="hidden" name="purchaseterms_default" id="purchaseterms_default" value="" data-required="true" validate="numeric" message="#rc.mmRBF.key('purchaseterms','validate')#" />
 				#rc.mmRBF.key('termslink')#
 			</li>
 		</ul>

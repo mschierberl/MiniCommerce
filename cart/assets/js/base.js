@@ -41,6 +41,10 @@ function purchasevalidate( frm,terms ) {
 
 jQuery(document).ready(function() {
 
+	jQuery('#purchaseterms').change( function() {
+		jQuery('#purchaseterms_default').val( jQuery(this).val() );
+	});
+
 	jQuery('#paymenttype').change( function() {
 		doHideShowCC();
 	});
@@ -69,12 +73,12 @@ jQuery(document).ready(function() {
 	doShow = function( target ) {
 		var $target = $(target);
 		$target.show();
-		$(":input",$target).attr('required','true');
+		$(":input",$target).attr('data-required','true');
 	};
 	doHide = function( target ) {
 		var $target = $(target);
 		$target.hide();
-		$(":input",$target).attr('required','false');
+		$(":input",$target).attr('data-required','false');
 	};
 	
 	doHideShowCC();
